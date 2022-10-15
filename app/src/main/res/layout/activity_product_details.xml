@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+        android:id="@+id/imageCarouselProductImages"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:showCaption="false"
+        app:showTopShadow="false"
+        app:showNavigationButtons="false"
+        app:autoPlay="true"
+        app:autoPlayDelay="5000"
+        app:touchToPause="true" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMainInformation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageCarouselProductImages">
+
+        <TextView
+            android:id="@+id/txtViewProductName"
+            style="@style/Widget.AppCompat.TextView.Title"
+            android:layout_width="199dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="0dp"
+            android:paddingEnd="8dp"
+            android:text="Pantalón" />
+
+        <TextView
+            android:id="@+id/txtViewProductPrice"
+            style="@style/Widget.AppCompat.TextView.Price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:paddingStart="8dp"
+            android:paddingEnd="0dp"
+            android:text="$50.00 M.N." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutOptions"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutMainInformation">
+
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/numberBtnAmount"
+            android:layout_width="142dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/number_button_background"
+            app:backGroundColor="@android:color/transparent"
+            app:textColor="@color/black"
+            app:textSize="5sp"
+            app:initialNumber="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddToBag"
+            style="@style/Widget.MaterialComponents.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/add_to_bag"
+            app:backgroundTint="@color/secondary_color"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/descriptionDivider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/divider_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutOptions" />
+
+    <TextView
+        android:id="@+id/txtViewProductDescription"
+        style="@style/Widget.AppCompat.TextView.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/product_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionDivider" />
+
+    <TextView
+        android:id="@+id/txtViewProductDescriptionContent"
+        style="@style/Widget.AppCompat.TextView.Content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:text="Prenda de vestir que se ajusta a la cintura y llega a una altura variable de la pierna o hasta los tobillos, cubriendo cada pierna por separado."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewProductDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

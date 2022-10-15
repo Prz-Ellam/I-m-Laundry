@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">I\'m Laundry</string>
+
+    <string name="add_to_bag">Añadir a la bolsa</string>
+
+    <!-- Product details strings-->
+    <string name="product_description">Descripción del producto</string>
+
+</resources>
