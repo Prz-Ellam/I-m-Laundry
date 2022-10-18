@@ -6,4 +6,8 @@
     <!-- Product details strings-->
     <string name="product_description">Descripción del producto</string>
 
+    <!-- Package details strings-->
+    <string name="package_description">Descripción del paquete</string>
+
+
 </resources>

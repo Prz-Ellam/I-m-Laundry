@@ -1,10 +1,7 @@
 package com.psm.imlaundry
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import me.relex.circleindicator.CircleIndicator
-import me.relex.circleindicator.CircleIndicator2
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
@@ -16,7 +13,6 @@ class ProductDetailsActivity: AppCompatActivity() {
                                                 "https://dsnegsjxz63ti.cloudfront.net/images/pg/m_326077a9fdcbc87.jpg",
                                                 "https://i0.wp.com/casaedith.mx/wp-content/uploads/2020/07/Pantal%C3%B3n-de-mezclilla-Kajm.jpeg?fit=720%2C1280&ssl=1")
 
-    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
