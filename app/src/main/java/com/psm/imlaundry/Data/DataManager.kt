@@ -13,6 +13,7 @@ object DataManager {
     val orders = ArrayList<Order>()
     val cards = ArrayList<Card>()
     val bagItems = ArrayList<BagItem>()
+    val cardTypes = ArrayList<CardType>()
     var content: Context? = null
 
     init {
@@ -21,6 +22,7 @@ object DataManager {
         this.initializeOrders()
         this.initializeCards()
         this.initializeBagItems()
+        this.initializeCardTypes()
     }
 
     private fun initializeProducts() {
@@ -248,6 +250,16 @@ object DataManager {
         bagItems.add(bagItem)
 
 
+    }
+
+
+    private fun initializeCardTypes() {
+
+        var cardType =  CardType(1,"Crédito")
+        cardTypes.add(cardType)
+
+        cardType = CardType(2,"Débito")
+        cardTypes.add(cardType)
     }
 
 }

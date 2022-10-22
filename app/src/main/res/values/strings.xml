@@ -47,5 +47,14 @@
     <string name="new_card">Nueva tarjeta</string>
     <string name="add_new_card">Agregar nueva tarjeta</string>
     <string name="continue_with_payment">Continuar con el pago</string>
+    <string name="card_number">Número de tarjeta</string>
+    <string name="card_number_hidden">XXXX XXXX XXXX XXXX</string>
+    <string name="expiration_date">Expiración</string>
+    <string name="cvv">CVV / CVC</string>
+    <string name="card_type">Tipo de tarjeta</string>
+    <string name="back">Regresar</string>
+    <string name="finish">Finalizar</string>
+    <string name="date_format">MM/YY</string>
+    <string name="select_option">Seleccione una opción</string>
 
 </resources>
