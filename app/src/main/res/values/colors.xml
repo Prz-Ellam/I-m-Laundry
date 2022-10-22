@@ -19,4 +19,6 @@
     <color name="secondary_color_dark">#002058</color>
     <color name="secondary_color_light">#5371b6</color>
 
+    <color name="progress_background_color">#A4D1DA</color>
+
 </resources>

@@ -5,25 +5,26 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.psm.imlaundry.Data.DataManager
 import kotlinx.android.synthetic.main.content_orders.*
+import kotlinx.android.synthetic.main.content_packages.*
 
-class ProductsActivity: AppCompatActivity() {
+class OrdersActivity: AppCompatActivity() {
 
-    private var productAdapter: ProductRecyclerAdapter? = null
+    private var orderAdapter: OrderRecyclerAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_products)
-        setSupportActionBar(findViewById(R.id.toolbar))
+        setContentView(R.layout.activity_orders)
+        setSupportActionBar(findViewById(R.id.toolbarOrders))
 
         DataManager.content = this
 
         //RecyclerView
         rcListOrders.layoutManager = LinearLayoutManager(this)
 
-        this.productAdapter = ProductRecyclerAdapter(this, DataManager.products)
+        this.orderAdapter = OrderRecyclerAdapter(this, DataManager.orders)
 
-        rcListOrders.adapter = this.productAdapter
+        rcListOrders.adapter = this.orderAdapter
     }
 
 }

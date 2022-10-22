@@ -19,7 +19,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imgViewPurchasable"
+                android:id="@+id/imgViewOrder"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginStart="8dp"
@@ -39,11 +39,11 @@
                 android:layout_marginEnd="8dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgViewPurchasable"
+                app:layout_constraintStart_toEndOf="@+id/imgViewOrder"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/txtViewPurchasableName"
+                    android:id="@+id/txtViewOrderNumber"
                     style="@style/Widget.AppCompat.TextView.Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
                     android:text="TextView" />
 
                 <TextView
-                    android:id="@+id/txtViewPurchasablePrice"
+                    android:id="@+id/txtViewOrderStatus"
                     style="@style/Widget.AppCompat.TextView.Price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgViewPurchasable"
+                app:layout_constraintStart_toEndOf="@+id/imgViewOrder"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
                 <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton

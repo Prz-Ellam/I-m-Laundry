@@ -10,3 +10,7 @@ const val DEFAULT_PRODUCT_POSITION = -1
 
 const val PACKAGE_POSITION = "Package_Position"
 const val DEFAULT_PACKAGE_POSITION = -1
+
+
+const val ORDER_POSITION = "Order_Position"
+const val DEFAULT_ORDER_POSITION = -1

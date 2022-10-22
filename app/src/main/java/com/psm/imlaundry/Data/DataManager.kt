@@ -1,19 +1,24 @@
 package com.psm.imlaundry.Data
 
 import android.content.Context
+import com.psm.imlaundry.Models.Order
 import com.psm.imlaundry.Models.PackageItem
 import com.psm.imlaundry.Models.Product
 import com.psm.imlaundry.R
+import java.util.*
+import kotlin.collections.ArrayList
 
 object DataManager {
 
     val products = ArrayList<Product>()
     val packageItems = ArrayList<PackageItem>()
+    val orders = ArrayList<Order>()
     var content: Context? = null
 
     init {
         this.initializeProducts()
         this.initializePackages()
+        this.initializeOrders()
     }
 
     private fun initializeProducts() {
@@ -132,4 +137,50 @@ object DataManager {
 
 
     }
+
+
+    private fun initializeOrders() {
+
+        var order =  Order()
+        order.number =  12
+        order.date = "21/04/2022"
+        order.status = "En proceso"
+        order.progressPercent = 85
+
+        orders.add(order)
+
+        order =  Order()
+        order.number =  15
+        order.date = "22/04/2022"
+        order.status = "En proceso"
+        order.progressPercent = 35
+
+        orders.add(order)
+
+        order =  Order()
+        order.number =  20
+        order.date = "23/04/2022"
+        order.status = "En proceso"
+        order.progressPercent = 60
+
+        orders.add(order)
+
+        order =  Order()
+        order.number =  23
+        order.date = "23/04/2022"
+        order.status = "Sin iniciar"
+        order.progressPercent = 0
+
+        orders.add(order)
+
+        order =  Order()
+        order.number =  23
+        order.date = "19/04/2022"
+        order.status = "Finalizado"
+        order.progressPercent = 100
+
+        orders.add(order)
+
+    }
+
 }
