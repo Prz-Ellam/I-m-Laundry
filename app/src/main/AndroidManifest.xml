@@ -3,9 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.psm.imlaundry">
 
-    <application
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:replace="android:theme"
+    <application xmlns:tools="http://schemas.android.com/tools"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,40 +12,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ImLaundry"
+        tools:replace="android:theme"
         tools:targetApi="31">
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".ProductsActivity"
-            android:exported="true">
-
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".PackagesActivity"
-            android:exported="true">
-
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".ProductDetailsActivity"
-            android:exported="true">
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".PackageDetailsActivity"
-            android:exported="true">
-        </activity>
-
+            android:exported="true" />
+            
         <activity
             android:name=".OrdersActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
 
         <activity
             android:name=".PaymentMethodsActivity"
@@ -58,7 +52,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
     </application>
