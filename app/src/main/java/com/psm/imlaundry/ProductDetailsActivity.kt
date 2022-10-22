@@ -2,30 +2,61 @@ package com.psm.imlaundry
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.psm.imlaundry.Data.DEFAULT_PRODUCT_POSITION
+import com.psm.imlaundry.Data.DataManager
+import com.psm.imlaundry.Data.PRODUCT_POSITION
+import com.psm.imlaundry.Models.Product
+import kotlinx.android.synthetic.main.activity_product_details.*
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 class ProductDetailsActivity: AppCompatActivity() {
 
-    // List of product images to show in carousel image
-    val productImages = mutableListOf<CarouselItem>()
-    val productImagesUrl: List<String> = listOf("https://http2.mlstatic.com/D_NQ_NP_655885-MLM50060385031_052022-O.jpg",
-                                                "https://dsnegsjxz63ti.cloudfront.net/images/pg/m_326077a9fdcbc87.jpg",
-                                                "https://i0.wp.com/casaedith.mx/wp-content/uploads/2020/07/Pantal%C3%B3n-de-mezclilla-Kajm.jpeg?fit=720%2C1280&ssl=1")
+    var productPosition: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_product_details)
+        setSupportActionBar(toolbarProductDetails)
 
-        // Add product images
-        for (imageUrl in productImagesUrl) {
+        // Load product position
+        this.productPosition = savedInstanceState?.getInt(PRODUCT_POSITION, DEFAULT_PRODUCT_POSITION)
+            ?: intent.getIntExtra(PRODUCT_POSITION, DEFAULT_PRODUCT_POSITION)
+
+        // Display product information
+        this.displayProductDetails()
+
+        // Cargar el toolbar
+        setSupportActionBar(toolbarProductDetails)
+    }
+
+    private fun displayProductDetails() {
+
+        // Get product
+        val product: Product = DataManager.products[productPosition]
+        txtViewProductName.text = product.name;
+        txtViewProductPrice.text = "$" + product.price.toString() + " M.N."
+
+        txtViewProductDescriptionContent.text = product.description;
+
+
+        // Load product images in carousel
+        val productImages = mutableListOf<CarouselItem>()
+
+        for (imageUrl in product.imagesUrl) {
             productImages.add(CarouselItem(imageUrl))
         }
 
-        // Load product images in carousel
         val imageCarouselView: ImageCarousel = findViewById(R.id.imageCarouselProductImages)
         imageCarouselView.addData(productImages)
 
+
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt(PRODUCT_POSITION, this.productPosition)
+    }
+
 }

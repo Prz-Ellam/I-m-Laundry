@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ImLaundry" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.ImLaundry" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
         <!-- Background color. -->
         <item name="android:windowBackground">@color/background_color</item>
@@ -17,6 +17,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-
     </style>
+
+    <style name="Theme.ImLaundry.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
 </resources>

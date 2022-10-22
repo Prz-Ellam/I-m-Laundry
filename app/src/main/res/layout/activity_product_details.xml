@@ -5,19 +5,30 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarProductDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white" />
+
 
     <org.imaginativeworld.whynotimagecarousel.ImageCarousel
         android:id="@+id/imageCarouselProductImages"
         android:layout_width="0dp"
         android:layout_height="300dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:showCaption="false"
-        app:showTopShadow="false"
-        app:showNavigationButtons="false"
         app:autoPlay="true"
         app:autoPlayDelay="5000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarProductDetails"
+        app:showCaption="false"
+        app:showNavigationButtons="false"
+        app:showTopShadow="false"
         app:touchToPause="true" />
 
 

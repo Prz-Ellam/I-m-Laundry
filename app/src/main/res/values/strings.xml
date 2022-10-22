@@ -9,5 +9,13 @@
     <!-- Package details strings-->
     <string name="package_description">Descripción del paquete</string>
 
+    <!-- Purchasables -->
+    <string name="packages">Paquetes</string>
+    <string name="garments">Prendas</string>
+    <string name="add">Añadir</string>
+    <string name="remove">Remover</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>
