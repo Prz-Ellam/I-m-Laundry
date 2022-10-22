@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">I\'m Laundry</string>
 
+    <!-- Login -->
+    <string name="login_title">Iniciar sesión</string>
+    <string name="login_email">Correo electrónico</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_forgot">¿Olvidaste tú contraseña?</string>
+    <string name="login_signup">¿Aún no tienes cuenta? ¡Registrate!</string>
+
     <string name="add_to_bag">Añadir a la bolsa</string>
 
     <!-- Product details strings-->
@@ -21,5 +28,14 @@
     <string name="order">Pedido #</string>
     <string name="status">Estatus:</string>
     <string name="washer_description">Imagen de una lavadora</string>
+    <string name="signup_names">Nombre(s)</string>
+    <string name="signup_last_name">Apellido(s)</string>
+    <string name="signup_phone">Teléfono</string>
+    <string name="signup_address">Domicilio</string>
+    <string name="signup_cancel">Cancelar</string>
+    <string name="signup_signup">Registrarse</string>
+    <string name="signup_email">Correo electrónico</string>
+    <string name="signup_password">Contraseña</string>
+    <string name="signup_continue">Continuar</string>
 
 </resources>
