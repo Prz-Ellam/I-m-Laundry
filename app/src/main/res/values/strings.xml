@@ -1,6 +1,23 @@
 <resources>
     <string name="app_name">I\'m Laundry</string>
 
+    <!-- Menu drawer-->
+    <string name="menu_album">Album</string>
+    <string name="menu_genre">Genre</string>
+    <string name="menu_contact">Contact</string>
+    <string name="menu_facebook">Facebook</string>
+    <string name="menu_youtube">Youtube</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_search">Buscar</string>
+    <string name="menu_bag">Mi bolsa</string>
+    <string name="menu_profile">Mi perfil</string>
+    <string name="menu_orders">Mis pedidos</string>
+    <string name="menu_branches">Sucursales</string>
+    <string name="menu_logout">Cerrar sesión</string>
+    <string name="navigation_drawer_open">Menú lateral abierto</string>
+    <string name="navigation_drawer_close">Menú lateral cerrado</string>
+
+
     <!-- Login -->
     <string name="login_title">Iniciar sesión</string>
     <string name="login_email">Correo electrónico</string>
