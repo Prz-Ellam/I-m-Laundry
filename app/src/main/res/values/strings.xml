@@ -22,4 +22,13 @@
     <string name="status">Estatus:</string>
     <string name="washer_description">Imagen de una lavadora</string>
 
+
+    <!-- Payment methods-->
+    <string name="card_method">Con tarjeta</string>
+    <string name="other_methods">Con otras formas de pago</string>
+    <string name="paypal">PayPal</string>
+    <string name="cash">Efectivo</string>
+    <string name="new_card">Nueva tarjeta</string>
+    <string name="add_new_card">Agregar nueva tarjeta</string>
+
 </resources>

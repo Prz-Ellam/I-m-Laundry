@@ -1,6 +1,7 @@
 package com.psm.imlaundry.Data
 
 import android.content.Context
+import com.psm.imlaundry.Models.Card
 import com.psm.imlaundry.Models.Order
 import com.psm.imlaundry.Models.PackageItem
 import com.psm.imlaundry.Models.Product
@@ -13,12 +14,14 @@ object DataManager {
     val products = ArrayList<Product>()
     val packageItems = ArrayList<PackageItem>()
     val orders = ArrayList<Order>()
+    val cards = ArrayList<Card>()
     var content: Context? = null
 
     init {
         this.initializeProducts()
         this.initializePackages()
         this.initializeOrders()
+        this.initializeCards()
     }
 
     private fun initializeProducts() {
@@ -180,6 +183,27 @@ object DataManager {
         order.progressPercent = 100
 
         orders.add(order)
+
+    }
+
+
+    private fun initializeCards() {
+
+        var card =  Card()
+        card.lastNumbers =  "4522"
+        card.bankName = "HSBC"
+        card.type = "Débito"
+        card.cardProvider = 2
+
+        cards.add(card)
+
+        card =  Card()
+        card.lastNumbers =  "2312"
+        card.bankName = "Banorte"
+        card.type = "Crédito"
+        card.cardProvider = 1
+
+        cards.add(card)
 
     }
 

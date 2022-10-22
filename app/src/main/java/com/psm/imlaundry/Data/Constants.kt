@@ -14,3 +14,7 @@ const val DEFAULT_PACKAGE_POSITION = -1
 
 const val ORDER_POSITION = "Order_Position"
 const val DEFAULT_ORDER_POSITION = -1
+
+
+const val CARD_POSITION = "Card_Position"
+const val DEFAULT_CARD_POSITION = -1
