@@ -56,5 +56,6 @@
     <string name="finish">Finalizar</string>
     <string name="date_format">MM/YY</string>
     <string name="select_option">Seleccione una opción</string>
+    <string name="add_card_button">Agregar</string>
 
 </resources>
