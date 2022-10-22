@@ -1,10 +1,7 @@
 package com.psm.imlaundry.Data
 
 import android.content.Context
-import com.psm.imlaundry.Models.Card
-import com.psm.imlaundry.Models.Order
-import com.psm.imlaundry.Models.PackageItem
-import com.psm.imlaundry.Models.Product
+import com.psm.imlaundry.Models.*
 import com.psm.imlaundry.R
 import java.util.*
 import kotlin.collections.ArrayList
@@ -15,6 +12,7 @@ object DataManager {
     val packageItems = ArrayList<PackageItem>()
     val orders = ArrayList<Order>()
     val cards = ArrayList<Card>()
+    val bagItems = ArrayList<BagItem>()
     var content: Context? = null
 
     init {
@@ -22,6 +20,7 @@ object DataManager {
         this.initializePackages()
         this.initializeOrders()
         this.initializeCards()
+        this.initializeBagItems()
     }
 
     private fun initializeProducts() {
@@ -204,6 +203,50 @@ object DataManager {
         card.cardProvider = 1
 
         cards.add(card)
+
+    }
+
+
+    private fun initializeBagItems() {
+
+        var bagItem =  BagItem()
+        bagItem.name =  "Pantalón"
+        bagItem.price = 70.00f
+        bagItem.imageId = R.drawable.jeans
+
+        bagItems.add(bagItem)
+
+
+        bagItem =  BagItem()
+        bagItem.name =  "Camiseta"
+        bagItem.price = 50.00f
+        bagItem.imageId = R.drawable.t_shirt
+
+        bagItems.add(bagItem)
+
+
+        bagItem =  BagItem()
+        bagItem.name =  "Gorro"
+        bagItem.price = 30.00f
+        bagItem.imageId = R.drawable.hat
+
+        bagItems.add(bagItem)
+
+        bagItem =  BagItem()
+        bagItem.name =  "5 playeras"
+        bagItem.price = 180.00f
+        bagItem.imageId = R.drawable.t_shirts_package
+
+        bagItems.add(bagItem)
+
+
+        bagItem =  BagItem()
+        bagItem.name =  "10 calzones"
+        bagItem.price = 250.00f
+        bagItem.imageId = R.drawable.underpants_package
+
+        bagItems.add(bagItem)
+
 
     }
 

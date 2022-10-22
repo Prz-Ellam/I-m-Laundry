@@ -42,46 +42,29 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:orientation="horizontal"
-                app:layout_constraintEnd_toStartOf="@+id/txtViewOrderDate"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imgViewOrder"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:id="@+id/txtViewOrderNumber"
                     style="@style/Widget.AppCompat.TextView.Title"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="1.5"
                     android:text="@string/order" />
 
                 <TextView
-                    android:id="@+id/txtViewOrderNumberContent"
-                    style="@style/Widget.AppCompat.TextView.Title"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txtViewOrderDate"
+                    style="@style/Widget.AppCompat.TextView.Price"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginEnd="0dp"
                     android:layout_weight="1"
-                    android:paddingStart="0dp"
-                    android:paddingEnd="0dp"
-                    android:text="1"
-                    app:layout_constraintStart_toEndOf="@+id/txtViewOrderNumber" />
+                    android:text="2022/10/21" />
 
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/txtViewOrderDate"
-                style="@style/Widget.AppCompat.TextView.Price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="17dp"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:text="2022/10/21"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/txtViewOrderStatus"

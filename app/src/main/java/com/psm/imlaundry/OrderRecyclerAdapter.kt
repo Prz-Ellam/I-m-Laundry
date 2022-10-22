@@ -10,8 +10,6 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.psm.imlaundry.Data.ORDER_POSITION
-import com.psm.imlaundry.Data.PACKAGE_POSITION
 import com.psm.imlaundry.Models.Order
 
 class OrderRecyclerAdapter(val context: Context, var orders: List<Order>):
@@ -22,7 +20,7 @@ class OrderRecyclerAdapter(val context: Context, var orders: List<Order>):
     inner class OrderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         // Get components
-        val txtOrderNumberContent = itemView?.findViewById<TextView>(R.id.txtViewOrderNumberContent)
+        val txtOrderNumberContent = itemView?.findViewById<TextView>(R.id.txtViewOrderNumber)
         val txtOrderDate = itemView?.findViewById<TextView>(R.id.txtViewOrderDate)
         val txtOrderStatusContent = itemView?.findViewById<TextView>(R.id.txtViewOrderStatusContent)
         val progressBarStatus = itemView?.findViewById<ProgressBar>(R.id.progressBarOrderStatus)
@@ -41,7 +39,7 @@ class OrderRecyclerAdapter(val context: Context, var orders: List<Order>):
 
     override fun onBindViewHolder(holder: OrderViewHolder, position: Int) {
         val order = this.orders[position]
-        holder.txtOrderNumberContent.text = order.number.toString()
+        holder.txtOrderNumberContent.text = "Pedido #" + order.number.toString()
         holder.txtOrderDate.text = order.date
         holder.txtOrderStatusContent.text = order.status
         holder.progressBarStatus.progress = order.progressPercent!!

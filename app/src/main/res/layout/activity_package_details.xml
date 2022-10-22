@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -17,126 +18,145 @@
         app:titleTextColor="@color/white" />
 
 
-    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-        android:id="@+id/imageCarouselPackageImages"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
-        app:autoPlay="true"
-        app:autoPlayDelay="5000"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarPackageDetails"
-        app:showCaption="false"
-        app:showNavigationButtons="false"
-        app:showTopShadow="false"
-        app:touchToPause="true" />
+        app:layout_constraintVertical_bias="1.0">
 
-
-    <LinearLayout
-        android:id="@+id/linearLayoutPackageMainInformation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageCarouselPackageImages">
-
-        <TextView
-            android:id="@+id/txtViewPackageName"
-            style="@style/Widget.AppCompat.TextView.Title"
-            android:layout_width="199dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingStart="0dp"
-            android:paddingEnd="8dp"
-            android:text="5 playeras" />
-
-        <TextView
-            android:id="@+id/txtViewPackagePrice"
-            style="@style/Widget.AppCompat.TextView.Price"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="3dp"
-            android:layout_weight="1"
-            android:paddingStart="8dp"
-            android:paddingEnd="0dp"
-            android:text="$180.00 M.N." />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayoutPackageOptions"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPackageMainInformation">
-
-        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
-            android:id="@+id/numberBtnPackageAmount"
-            android:layout_width="142dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/number_button_background"
-            app:backGroundColor="@android:color/transparent"
-            app:textColor="@color/black"
-            app:textSize="5sp"
-            app:initialNumber="1"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnAddPackageToBag"
-            style="@style/Widget.MaterialComponents.Button.Primary"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="0dp"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            android:text="@string/add_to_bag"
-            app:backgroundTint="@color/secondary_color"/>
+            android:layout_height="wrap_content"
+            android:paddingBottom="32dp">
 
-    </LinearLayout>
+            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                android:id="@+id/imageCarouselPackageImages"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                app:autoPlay="true"
+                app:autoPlayDelay="5000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:showCaption="false"
+                app:showNavigationButtons="false"
+                app:showTopShadow="false"
+                app:touchToPause="true" />
 
-    <View
-        android:id="@+id/descriptionPackageDivider"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/divider_color"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPackageOptions" />
+            <LinearLayout
+                android:id="@+id/linearLayoutPackageMainInformation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageCarouselPackageImages">
 
-    <TextView
-        android:id="@+id/txtViewPackageDescription"
-        style="@style/Widget.AppCompat.TextView.Subtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/package_description"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionPackageDivider" />
+                <TextView
+                    android:id="@+id/txtViewPackageName"
+                    style="@style/Widget.AppCompat.TextView.Title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.8"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="8dp"
+                    android:text="5 playeras" />
 
-    <TextView
-        android:id="@+id/txtViewPackageDescriptionContent"
-        style="@style/Widget.AppCompat.TextView.Content"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:text="Este paquete incluye 5 playeras, indistinto el género y el color.\n\nAhorra hasta un 10% de descuento ordenando este paquete."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtViewPackageDescription" />
+                <TextView
+                    android:id="@+id/txtViewPackagePrice"
+                    style="@style/Widget.AppCompat.TextView.Price"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="0dp"
+                    android:text="$180.00 M.N." />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutPackageOptions"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutPackageMainInformation">
+
+                <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                    android:id="@+id/numberBtnPurchasableAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/number_button_background"
+                    app:backGroundColor="@android:color/transparent"
+                    app:initialNumber="1"
+                    app:textColor="@color/black"
+                    app:textSize="5sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddPurchasableToBag"
+                    style="@style/Widget.MaterialComponents.Button.Primary"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_weight="1.4"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/add_to_bag"
+                    app:backgroundTint="@color/secondary_color" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/descriptionPackageDivider"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/divider_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutPackageOptions" />
+
+            <TextView
+                android:id="@+id/txtViewPackageDescription"
+                style="@style/Widget.AppCompat.TextView.Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/package_description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionPackageDivider" />
+
+            <TextView
+                android:id="@+id/txtViewPackageDescriptionContent"
+                style="@style/Widget.AppCompat.TextView.Content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:text="Este paquete incluye 5 playeras, indistinto el género y el color.\n\nAhorra hasta un 10% de descuento ordenando este paquete."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewPackageDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,21 +38,24 @@
         <activity
             android:name=".PackageDetailsActivity"
             android:exported="true" />
-            
         <activity
             android:name=".OrdersActivity"
             android:exported="true" />
 
         <activity
-            android:name=".PaymentMethodsActivity"
-            android:exported="true">
+            android:name=".BagActivity"
+            android:exported="true" >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity>/>
+
+        <activity
+            android:name=".PaymentMethodsActivity"
+            android:exported="true" />
 
     </application>
 

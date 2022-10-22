@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.psm.imlaundry.Data.DataManager
-import kotlinx.android.synthetic.main.content_orders.*
+import kotlinx.android.synthetic.main.content_products.*
 
 class ProductsActivity: AppCompatActivity() {
 
@@ -19,11 +19,11 @@ class ProductsActivity: AppCompatActivity() {
         DataManager.content = this
 
         //RecyclerView
-        rcListOrders.layoutManager = LinearLayoutManager(this)
+        rcListProducts.layoutManager = LinearLayoutManager(this)
 
         this.productAdapter = ProductRecyclerAdapter(this, DataManager.products)
 
-        rcListOrders.adapter = this.productAdapter
+        rcListProducts.adapter = this.productAdapter
     }
 
 }

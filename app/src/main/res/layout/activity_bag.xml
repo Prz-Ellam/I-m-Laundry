@@ -19,6 +19,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_packages" />
+    <include layout="@layout/content_bag" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

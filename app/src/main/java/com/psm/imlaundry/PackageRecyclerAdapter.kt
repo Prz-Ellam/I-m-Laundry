@@ -20,9 +20,9 @@ class PackageRecyclerAdapter(val context: Context, var packages: List<PackageIte
     inner class PackageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
         // Get components
-        val txtName = itemView?.findViewById<TextView>(R.id.txtViewOrderNumber)
-        val txtPrice = itemView?.findViewById<TextView>(R.id.txtViewOrderStatus)
-        val imgProduct = itemView?.findViewById<ImageView>(R.id.imgViewOrder)
+        val txtName = itemView?.findViewById<TextView>(R.id.txtViewPurchasableName)
+        val txtPrice = itemView?.findViewById<TextView>(R.id.txtViewPurchasablePrice)
+        val imgProduct = itemView?.findViewById<ImageView>(R.id.imgViewPurchasable)
 
         var packagePosition:Int = 0
 

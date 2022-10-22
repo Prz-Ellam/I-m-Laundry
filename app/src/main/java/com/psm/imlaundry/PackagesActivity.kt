@@ -14,16 +14,16 @@ class PackagesActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_packages)
-        setSupportActionBar(findViewById(R.id.toolbarPackages))
+        setSupportActionBar(findViewById(R.id.toolbarBag))
 
         DataManager.content = this
 
         //RecyclerView
-        rcListPackage.layoutManager = LinearLayoutManager(this)
+        rcListBagItems.layoutManager = LinearLayoutManager(this)
 
         this.productAdapter = PackageRecyclerAdapter(this, DataManager.packageItems)
 
-        rcListPackage.adapter = this.productAdapter
+        rcListBagItems.adapter = this.productAdapter
     }
 
 }

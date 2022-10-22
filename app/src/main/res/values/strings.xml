@@ -46,5 +46,6 @@
     <string name="cash">Efectivo</string>
     <string name="new_card">Nueva tarjeta</string>
     <string name="add_new_card">Agregar nueva tarjeta</string>
+    <string name="continue_with_payment">Continuar con el pago</string>
 
 </resources>

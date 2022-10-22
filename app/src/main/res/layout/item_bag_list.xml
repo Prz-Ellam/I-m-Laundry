@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/idPurchasableFrameLayoutCard"
+    android:id="@+id/idBagFrameLayoutCard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -45,17 +45,17 @@
                 <TextView
                     android:id="@+id/txtViewPurchasableName"
                     style="@style/Widget.AppCompat.TextView.Title"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.4"
+                    android:layout_weight="1"
                     android:text="TextView" />
 
                 <TextView
                     android:id="@+id/txtViewPurchasablePrice"
                     style="@style/Widget.AppCompat.TextView.Price"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="0.6"
                     android:text="TextView" />
             </LinearLayout>
 
@@ -87,7 +87,7 @@
                     app:textSize="5sp" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnAddPurchasableToBag"
+                    android:id="@+id/btnRemoveFromBag"
                     style="@style/Widget.MaterialComponents.Button.Primary"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -96,10 +96,9 @@
                     android:layout_weight="1.1"
                     android:insetTop="0dp"
                     android:insetBottom="0dp"
-                    android:text="@string/add"
-                    app:backgroundTint="@color/secondary_color"
-                    app:icon="@drawable/ic_add_24"
-                    app:iconGravity="start"
+                    android:text="@string/remove"
+                    app:backgroundTint="@color/third_color"
+                    app:icon="@drawable/ic_trash_24"
                     app:iconPadding="0dp"
                     app:iconSize="20dp" />
 
