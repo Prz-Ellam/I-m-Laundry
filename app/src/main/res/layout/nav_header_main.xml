@@ -21,8 +21,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/calcetines"
-        app:civ_border_color="#FF000000"
+        android:src="@drawable/ic_person_24"
+        app:civ_circle_background_color="@color/white"
+        app:civ_border_color="@color/primary_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
