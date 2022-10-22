@@ -3,7 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SignupActivity">
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/signup_background"
+        android:layout_width="0dp"
+        android:layout_height="164dp"
+        android:background="@drawable/signup_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <androidx.constraintlayout.utils.widget.MotionLabel
+        android:id="@+id/lbl_signup"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+
+        android:text="Registrarse"
+        android:textColor="@color/secondary_color"
+        android:textSize="28sp"
+        android:layout_marginTop="8dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/signup_background_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <fragment
+        android:id="@+id/fragment_signup"
+        android:name="com.psm.imlaundry.SignupOneFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="156dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_signup"
+        tools:layout="@layout/fragment_signup_one" />
+
+</androidx.constraintlayout.widget.ConstraintLayout >
